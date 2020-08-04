@@ -1,10 +1,13 @@
 import React from "react";
 
-const OutputBox = ({ outputText, value }) => {
+const OutputBox = ({ outputText }) => {
   return (
-    <div className="ui segment" style={{ whiteSpace: "pre-wrap" }}>
-      <div value={value} dangerouslySetInnerHTML={{ __html: outputText }} />
-    </div>
+    <div
+      dangerouslySetInnerHTML={outputText}
+      id="preview"
+      className="ui segment"
+      style={{ whiteSpace: "pre-wrap" }}
+    ></div>
   );
 };
 
